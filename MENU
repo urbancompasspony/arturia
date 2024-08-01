@@ -1,0 +1,70 @@
+#!/bin/bash
+
+inits=".Arturia - "
+
+wd="$( cd "$(dirname "$0")" ; pwd -P )"
+
+function menu {
+var0=$(dialog --title "Arturia Launcher 1.0" --backtitle "Remember, you don't know you're a musician until you try!" --menu "Choose your Synth!" 17 0 15 \
+1 'Acid V' \
+2 'Jun-6 V' \
+3 'ARP 2600 V3' \
+4 'Buchla Easel V' \
+5 'CMI V' \
+6 'CS-80 V3' \
+7 'CS-80 V4' \
+8 'CZ V' \
+9 'DX7 V' \
+10 'Emulator II V' \
+11 'Jup-8 V3' \
+12 'Jup-8 V4' \
+13 'Matrix-12 V2' \
+14 'KORG MS-20 V' \
+15 'MiniFreak V (Crash)' \
+16 'Mini V3' \
+17 'Modular V3' \
+18 'OP-Xa V' \
+19 'Prophet-5 V' \
+20 'Prophet V3' \
+21 'Prophet-VS V' \
+22 'SEM V2' \
+23 'SQ80 V' \
+24 'Synclavier V' \
+25 'Synthi V' \
+26 'Vocoder V' \
+X 'EXIT' 2>&1 > /dev/tty )
+
+case "$var0" in
+1) $wd/"$inits""Acid V" ; menu ;;
+2) $wd/"$inits""Jun-6 V" ; menu ;;
+3) $wd/"$inits""ARP 2600 V3" ; menu ;;
+4) $wd/"$inits""Buchla Easel V" ; menu ;;
+5) $wd/"$inits""CMI V" ; menu ;;
+6) $wd/"$inits""CS-80 V3" ; menu ;;
+7) $wd/"$inits""CS-80 V4" ; menu ;;
+8) $wd/"$inits""CZ V" ; menu ;;
+9) $wd/"$inits""DX7 V" ; menu ;;
+10) $wd/"$inits""Emulator II V" ; menu ;;
+11) $wd/"$inits""Jup-8 V3" ; menu ;;
+12) $wd/"$inits""Jup-8 V4" ; menu ;;
+13) $wd/"$inits""Matrix-12 V2" ; menu ;;
+14) $wd/"$inits""KORG MS-20 V" ; menu ;;
+15) $wd/"$inits""MiniFreak V" ; menu ;;
+16) $wd/"$inits""Mini V3" ; menu ;;
+17) $wd/"$inits""Modular V3" ; menu ;;
+18) $wd/"$inits""OP-Xa V" ; menu ;;
+19) $wd/"$inits""Prophet-5 V" ; menu ;;
+20) $wd/"$inits""Prophet V3" ; menu ;;
+21) $wd/"$inits""Prophet-VS V" ; menu ;;
+22) $wd/"$inits""SEM V2" ; menu ;;
+23) $wd/"$inits""SQ80 V" ; menu ;;
+24) $wd/"$inits""Synclavier V" ; menu ;;
+25) $wd/"$inits""Synthi V" ; menu ;;
+26) $wd/"$inits""Vocoder V" ; menu ;;
+X) exit ;;
+esac
+}
+
+menu
+
+exit 1
